@@ -13,24 +13,25 @@
    See the License for the specific language governing permissions and
    limitations under the License.
 */
+use std::io;
 
 fn main() {
-    println!("Width:")
+    println!("Width:");
     let mut width = String::new();    //
     io::stdin().read_line(&mut width)
     	.expect("failed to read line");
     let width:u32 = width.trim().parse()
         .expect("Not a valid number");
-    println!("height")
+    println!("height:");
     let mut height = String::new();    //
         io::stdin().read_line(&mut height)
     	.expect("failed to read line");
-    let width:u32 = width.trim().parse()
+    let height:u32 = height.trim().parse()
         .expect("Not a valid number");
     
     println!(
         "the area of the rectangle is {} sqare pixels",
-        area(WIDTH1, HEIGHT1)
+        area(width, height)
     );
 }
 fn area(width: u32, height: u32) -> u32 {
